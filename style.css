@@ -1,0 +1,51 @@
+body{
+    background: url(texture2.jpg) repeat;
+
+
+}
+#about{
+    background: url(wood_3.jpg);
+    box-shadow: 0px 0px 5px 10px black;
+    text-shadow: 0px 0px 5px yellow;
+    color: black;
+    text-align: center;
+    //padding-top: 30px;
+  //  position: fixed;
+}
+
+#about img{
+    margin: 30px auto;
+}
+
+#portfolio .projects{
+    height:100%;
+    overflow-y: scroll;
+    background: url(rope_2.png) repeat-y, url(rope_2.png) repeat-y;
+    background-position: 30% 0%, 50% 0%;
+    
+}
+
+#portfolio h1{
+    background: url(wood_4.jpg);
+    background-size: 100% 100%; 
+    box-shadow: 5px 0px 5px 5px black;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.project{
+    background: rgba(255, 255, 255, 0.4);
+    margin: 5%;
+}
+
+.project img{
+    float:left;
+    margin: 10px;
+}
+.cos{
+/*   / background: rgba(255, 255, 255, 0.4);*/
+   // height: 134px !important;
+}
+
