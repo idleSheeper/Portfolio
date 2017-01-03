@@ -1,30 +1,41 @@
 $(document).ready(function(){
-    console.log($(window).height());
-    $('#about, #portfolio').css('height',$(window).height());
+    
+    console.log($(window).height());    
+    $('#about, #portfolio, .container').css('height',$(window).height());
+    $('.projects').hide();
     $('.projects').css('height', 'calc(' + $('#portfolio').css('height') + ' - ' + $('#portfolio .cos').css('height') +')');
-///    $('.projects').hide();
     $('.projects').attr('width', $('.projects').css('width'));
     var rope = 0;
     
-//    $('#portfolio .cos').on('click', function(){
-//        $('.projects').fadeToggle();
-//    });
-    
-    $('.projects').on('scroll',function(){ 
-       // $(this).animate({backgroundPosition: '-=0% -=1px -=0px -=5px'}, 10);
-       // $(this).animate({backgroundPosition: '-=0% -=1px'}, 10);
-        var tab =($(this).css('background-position-y').replace(',' , '').split('%'));
-        var factor = 5;
-        console.log(tab)
-        
-        if($(this).children().first().position().top -rope >0) factor = -5;
-            
-        tab[0] = parseInt(tab[0])- factor;
-        tab[1] = parseInt(tab[1])+ factor;
-        
-        $(this).css({backgroundPositionY: ''+tab[0] +'%, ' + tab[1] + '%'});
-        console.log($(this).css('background-position'));
-        rope = $(this).children().first().position().top;
+    // Resize window -> change height
+    $( window ).resize(function() {
+        $('#about, #portfolio').css('height',$(window).height());
+        $('.projects').css('height', 'calc(' + $('#portfolio').css('height') + ' - ' + $('#portfolio .cos').css('height') +')');
+        $('.projects').attr('width', $('.projects').css('width')); 
+    });
+    $('#portfolio .cos').on('click', function(){
+        $('.projects').slideToggle();
        
+    });
+    
+    
+    $('.poster').on('click', function(){
+        $('#portfolio').toggle();
+        $(this).parent().toggleClass('col-sm-12 col-sm-4 col-xs-12 about-zoom');
+        $(this).toggleClass('zoom ');
+        $('.arrow').toggle();
+        console.log('zoomi');
+    });
+    
+    $('.arrow').on('click', function(event){
+        event.preventDefault();
+        if ($(this).hasClass("isDown") ) {
+            $(this).stop().animate({bottom:"-=50px"}, 200);          
+            $(this).removeClass("isDown");
+        } else {
+            $(this).stop().animate({bottom:"+=50px"}, 200);   
+            $(this).addClass("isDown");
+        }
+        return false;
     });
 });
