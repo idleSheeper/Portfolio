@@ -137,25 +137,18 @@ body{
     font-size: 18px;
     color: black;
     text-shadow: 0px 0px 3px black;
-    text-transform: uppercase;
     text-align: justify;
 }
 
 .project h2{
     text-align: center;
-}
-
-.project > :nth-child(2){
-    font-size: 1.5em;
-    font-weight: 700;
-}
-.project > :last-child{
-text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
 }
 
 .project img{
     float:left;
-    margin: 10px 20px 10px 0px;
+    margin: 0px 20px 10px 0px;
     filter: sepia(1);
     transition: all 0.5s;
 }
@@ -165,13 +158,21 @@ text-align: center;
 }
 
 .project a, .project a:hover, .project a:visited{
-    color: red;
+    color: silver;
     font-size: 25px;
     margin: 0;
     text-decoration: none;
 }
-.project span{
+
+.project p a:hover span{
     color:green ;
+}
+.project p a:hover{
+    color: red;
+}
+.center{
+    text-align: center;
+    padding: 5px 0;
 }
 .cos{
 /*   / background: rgba(255, 255, 255, 0.4);*/
@@ -200,3 +201,4 @@ text-align: center;
         
 }
 }
+
