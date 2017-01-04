@@ -141,7 +141,8 @@ body{
     text-align: justify;
 }
 
-.project p{
+.project h2{
+    text-align: center;
 }
 
 .project > :nth-child(2){
