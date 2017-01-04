@@ -60,7 +60,10 @@ $(document).ready(function(){
         } else {
             $(this).stop().animate({bottom:"+=50px"}, 200);   
             $(this).addClass("isDown");
+            console.log('dziala');
         };
-        return false;
-    });
+        return false;})
+            .children().on('click', function (event) {
+        event.stopPropagation();
+        });
 });
