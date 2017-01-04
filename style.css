@@ -57,6 +57,14 @@ body{
     margin:0;
     font-size: 2em;
 }
+.poster p{
+    font-family: impact;
+    padding: 0px 10%;
+    font-size: calc( 1 / 1vw);
+}
+.font-for-sm{
+    font-size: 18px;
+}
 
 .zoom{
     font-size: 2em;
