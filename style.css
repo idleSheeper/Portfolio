@@ -127,17 +127,18 @@ body{
 }
 
 .project{
-    background: url(board_2.png);
+   // background: url(board_2.png);
+    background: url(wanted-poster.png);
     //background: rgba(255, 255, 255, 0.4);
     background-position: center top;
-    background-size: 100% auto;
+    background-size: 100% 100%;
     margin: 50px 2%;
     padding: 20px 30px;
     font-size: 18px;
     color: black;
     text-shadow: 0px 0px 3px black;
     text-transform: uppercase;
-
+    text-align: justify;
 }
 
 .project p{
@@ -146,6 +147,9 @@ body{
 .project > :nth-child(2){
     font-size: 1.5em;
     font-weight: 700;
+}
+.project > :last-child{
+text-align: center;
 }
 
 .project img{
@@ -161,11 +165,12 @@ body{
 
 .project a, .project a:hover, .project a:visited{
     color: red;
+    font-size: 25px;
     margin: 0;
     text-decoration: none;
 }
 .project span{
-    color:red;
+    color:green ;
 }
 .cos{
 /*   / background: rgba(255, 255, 255, 0.4);*/
