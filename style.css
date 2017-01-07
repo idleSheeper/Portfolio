@@ -1,29 +1,10 @@
 body{
-    background: url(texture2.jpg) repeat;
+    background: url(img/texture2.jpg) repeat;
 }
 
 .container{
     position: relative;
 }
-
-/************** about *********/
-#about{
-    background: url(wood_3.jpg);
-    box-shadow: 0px 0px 5px 10px black;
-    text-shadow: 0px 0px 5px yellow;
-    color: black;
-    text-align: center;
-    //padding-top: 30px;
-  //  position: fixed;
-    position: relative;
-    overflow: hidden;
-}
-
-#about img{
-    margin: 0px auto;
-}
-
-
 
 @font-face 
 {
@@ -31,8 +12,26 @@ body{
     src: url('Western%20Bang%20Bang.ttf');
 }
 
-.poster{
-    background: url(wanted-poster.png) no-repeat;
+/******************************/
+/************* about **********/
+/******************************/
+#about{
+    background: url(img/wood_3.jpg);
+    background-size: auto 100%; 
+    box-shadow: 0px 0px 5px 10px black;
+    color: black;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#about img {
+    margin: 0px auto;
+}
+
+
+.poster {
+    background: url(img/wanted-poster.png) no-repeat;
     background-size: 100% 100%;
     padding: 10px;
     margin: 50px 0px;
@@ -42,49 +41,59 @@ body{
     cursor: pointer;
 }
 
+.poster img {
+    width: 80%; 
+    height: auto; 
+    filter: sepia(1);
+    //transition: all 0.2s;
+}
+
+.poster img:hover {
+    filter: sepia(0);
+}
 
 .poster h2 {
-    margin: 0 0 -20px;
-
     font-size: 6em;
+    margin: 0 0 -20px;
 }
 
 .poster h3 {
     font-size: 3.5em;
-    margin:0;
+    margin: 0;
 }
+
 .poster h4 {
-    margin:0;
     font-size: 2em;
+    margin: 0;
 }
+
 .poster p{
-    font-family: impact;
+    font-family: impact, serif;
     padding: 0px 10%;
-    font-size: calc( 1 / 1vw);
 }
-.font-for-sm{
+
+.font-for-sm {
     font-size: 18px;
 }
 
-.zoom{
+.zoom {
     font-size: 2em;
     padding: 20px;
     width: 80%;
-/*   / max-width: 500px !important;*/
     min-width: 300px !important;
-    margin:auto;
+    margin: auto;
 }
-.about-zoom{
+
+.about-zoom {
     height: auto !important;
-    background: url(wood_3.jpg);
+    background: url(img/wood_3.jpg);
     background-size: 100% 100% !important;
     box-shadow: 0px 0px 5px 10px black;
-    text-shadow: 0px 0px 5px yellow;
     padding: 50px;
 }
 
-.arrow{
-    background: url(arrow-1.png);
+.arrow {
+    background: url(img/arrow.png);
     background-position: center top;
     background-size: 100% 100%;
     height: 100px;
@@ -93,7 +102,6 @@ body{
     bottom: -60px;
     left: 0%;
     padding: 15px;
-    //cursor: pointer;
     text-align: center;
 }
 
@@ -106,14 +114,17 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/*******************************************/
 /************** Portfolio ******************/
-#portfolio{
+/*******************************************/
+#portfolio {
     position: relative;
     
 }
 
-#portfolio h1{
-    background: url(wood_4.jpg);
+#portfolio h1 {
+    background: url(img/wood_4.jpg);
     background-size: 100% 100%; 
     box-shadow: 5px 0px 5px 5px black;
     text-align: center;
@@ -123,9 +134,9 @@ body{
     
 }
 
-#portfolio .projects{
-    height:100%;
-    background: url(rope_1.png) repeat-y local;
+#portfolio .projects {
+    height: 100%;
+    background: url(img/rope.png) repeat-y local;
     background-position: center 0%; 
     padding: 20px 0;
 }
@@ -134,10 +145,8 @@ body{
     overflow-y: scroll;
 }
 
-.project{
-   // background: url(board_2.png);
-    background: url(wanted-poster.png);
-    //background: rgba(255, 255, 255, 0.4);
+.project {
+    background: url(img/wanted-poster.png);
     background-position: center top;
     background-size: 100% 100%;
     margin: 50px 2%;
@@ -148,52 +157,46 @@ body{
     text-align: justify;
 }
 
-.project h2{
+.project h2 {
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 10px;
 }
 
-.project img{
-    float:left;
+.project img {
+    float: left;
     margin: 0px 20px 10px 0px;
     filter: sepia(1);
     transition: all 0.5s;
 }
 
-.project img:hover{
+.project img:hover {
     filter: sepia(0);
 }
 
-.project a, .project a:hover, .project a:visited{
+.project a, .project a:hover, .project a:visited {
     color: silver;
     font-size: 25px;
     margin: 0;
     text-decoration: none;
 }
 
-.project p a:hover span{
-    color:green ;
+.project p a:hover span {
+    color: green ;
 }
-.project p a:hover{
+.project p a:hover {
     color: red;
 }
-.center{
+.center {
     text-align: center;
     padding: 5px 0;
 }
-.cos{
-/*   / background: rgba(255, 255, 255, 0.4);*/
-   // height: 134px !important;
-}
 
-#noose{
-/*    /margin-left: -20px;*/
+#noose {
     transform-origin: 50% 0;
     animation: swing 3s ease 0s infinite;
     position: absolute;
     right: -5%;
-
 }
 
 @keyframes swing
@@ -201,12 +204,3 @@ body{
     0%, 100% { transform: rotate(1deg); }
     50% { transform: rotate(-2deg); }
 }
-
-@media only screen and (max-width: 992px)
-{
-    [class="projects"] {
-   height: auto;
-        
-}
-}
-
