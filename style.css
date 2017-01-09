@@ -70,15 +70,11 @@ body{
 .poster p{
     font-family: impact, serif;
     padding: 0px 3%;
-    font-size: .65em;
-}
-
-.font-for-sm {
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .zoom {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 20px;
     width: 80%;
     min-width: 300px !important;
@@ -131,8 +127,7 @@ body{
     text-align: center;
     margin: 0;
     padding: 20px;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 #portfolio .projects {
@@ -206,16 +201,16 @@ body{
     50% { transform: rotate(-2deg); }
 }
 
+
 @media (max-width: 768px){
     .poster {
         font-size: 4vw;
     }
     
     .poster p{
-        font-size: 14px !important;
+        font-size: 15px !important;
     }
 }
-
 
 @media (min-width: 768px) and (max-width: 992px) {
     .poster p{
@@ -225,16 +220,16 @@ body{
 
 @media (min-width: 992px) and (max-width: 1200px){
     .poster p{
-        font-size:0.8em;
+        font-size: 1em;
     }
     .poster h3{
         font-size: 3em;
     }
 }
 
-
 @media (min-width: 1200px){
     .poster p{
-        font-size:0.8em;
+        font-size: 1em;
     }
 }
+
